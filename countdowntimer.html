@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDown TImer</title>
+    <link rel="stylesheet" href="output.css">
+    
+</head>
+<body class="bg-yellow-500">
+    <div id="container" class="relative w-screen h-screen">
+        <div id="main" class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+            <div id="type" class="flex gap-10">
+                <button id="stopwatch-btn" onclick="showSection('stopwatch')" class="hover:bg-blue-700 transition-colors duration-300 px-4 py-2 bg-blue-500 w-[200px] rounded-3xl text-white font-mono text-2xl">Stopwatch</button>
+                <button id="countdown-btn" onclick="showSection('countdown')" class="hover:bg-blue-700 transition-colors duration-300 px-4 py-2 bg-blue-500 w-[200px] rounded-3xl text-white font-mono text-2xl">Countdown</button>
+            </div>
+            <div id="stopwatch" class="">
+                <h1 class="m-4 font-mono text-3xl text-center text-yellow-100 font-extralight">Stopwatch</h1>
+                <div id="timerup" class="flex items-center justify-center w-full text-6xl text-center"">
+                <div class="w-24 p-2 mx-1 text-yellow-500 bg-white rounded-lg">
+                    <div class="font-mono leading-none" x-text="Days">00</div>
+                    <div class="font-mono text-sm leading-none uppercase">Days</div>
+                </div>
+                <div class="w-24 p-2 mx-1 text-yellow-500 bg-white rounded-lg">
+                    <div class="font-mono leading-none" x-text="Hours">00</div>
+                    <div class="font-mono text-sm leading-none uppercase">Hours</div>
+                </div>
+                <div class="w-24 p-2 mx-1 text-yellow-500 bg-white rounded-lg">
+                    <div class="font-mono leading-none" x-text="Minutes">00</div>
+                    <div class="font-mono text-sm leading-none uppercase">Minutes</div>
+                </div>
+                <div class="w-24 p-2 mx-1 text-yellow-500 bg-white rounded-lg">
+                    <div class="font-mono leading-none" x-text="Second">00</div>
+                    <div class="font-mono text-sm leading-none uppercase">Second</div>
+                </div>
+            </div>
+            <button id="start-btn-stopwatch" onclick="toggleStopwatchBtn('start')" class="hover:bg-blue-700 transition-colors duration-300 p-2 text-white mt-4 ml-[25px] font-mono text-2xl w-[400px] bg-blue-500 rounded-3xl">Start</button>
+            <button id="resume-btn-stopwatch" onclick="toggleStopwatchBtn('resume')" class="hidden hover:bg-blue-700 transition-colors duration-300 p-2 text-white mt-4 ml-[25px] font-mono text-2xl w-[180px] bg-blue-500 rounded-3xl">Resume</button>
+            <button id="pause-btn-stopwatch" onclick="toggleStopwatchBtn('pause')" class="hidden hover:bg-orange-700 transition-colors duration-300 p-2 text-white mt-4 ml-[25px] font-mono text-2xl w-[180px] bg-orange-500 rounded-3xl">Pause</button>
+            <button id="reset-btn-stopwatch" onclick="toggleStopwatchBtn('reset')" class="hidden hover:bg-green-700 transition-colors duration-300 p-2 text-white mt-4 ml-[25px] font-mono text-2xl w-[180px] bg-green-500 rounded-3xl">Reset</button>
+            </div>
+            <div id="countdown" class="hidden">
+                <h1 class="m-4 font-mono text-3xl text-center text-yellow-100 font-extralight">Countdown</h1>
+                <div id="timerdown" class="flex items-center justify-center w-full text-6xl text-center"">
+                <div class="w-24 p-2 mx-1 text-yellow-500 bg-white rounded-lg">
+                    <div class="font-mono leading-none" x-text="Days">00</div>
+                    <div class="font-mono text-sm leading-none uppercase">Days</div>
+                </div>
+                <div class="w-24 p-2 mx-1 text-yellow-500 bg-white rounded-lg">
+                    <div class="font-mono leading-none" x-text="Hours">00</div>
+                    <div class="font-mono text-sm leading-none uppercase">Hours</div>
+                </div>
+                <div class="w-24 p-2 mx-1 text-yellow-500 bg-white rounded-lg">
+                    <div class="font-mono leading-none" x-text="Minutes">00</div>
+                    <div class="font-mono text-sm leading-none uppercase">Minutes</div>
+                </div>
+                <div class="w-24 p-2 mx-1 text-yellow-500 bg-white rounded-lg">
+                    <div class="font-mono leading-none" x-text="Second">00</div>
+                    <div class="font-mono text-sm leading-none uppercase">Second</div>
+                </div>
+                
+            </div>
+            <div>
+            <button id="start-btn-countdown" onclick="toggleCountdownBtn('start')" class="hover:bg-blue-700 transition-colors duration-300 p-2 text-white mt-4 ml-[25px] font-mono text-2xl w-[400px] bg-blue-500 rounded-3xl">Start</button>
+            <button id="pause-btn-countdown" onclick="toggleCountdownBtn('pause')" class="hidden hover:bg-orange-700 transition-colors duration-300 p-2 text-white mt-4 ml-[25px] font-mono text-2xl w-[180px] bg-orange-500 rounded-3xl">Pause</button>
+            <button id="reset-btn-countdown" onclick="toggleCountdownBtn('reset')" class="hidden hover:bg-green-700 transition-colors duration-300 p-2 text-white mt-4 ml-[25px] font-mono text-2xl w-[180px] bg-green-500 rounded-3xl">Reset</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script src="countdowntimer.js"></script>
+</body>
+</html> 

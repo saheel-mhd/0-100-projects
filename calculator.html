@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="output.css" class="rel">
+</head>
+<body class="bg-blue-100">
+    
+    
+    <div id="container" class="flex items-center justify-center h-[90vh]">
+        <div id="box" class="bg-gray-700 border border-black rounded-lg">
+            <div id="head" class="flex w-[400px] h-[100px] bg-gray-400  gap-4 border-2 border-black px-4 py-4 m-4 rounded-md">
+                <div id="display" class="w-[350px] h-[70px] border-2 border-black rounded-md bg-white text-right p-3 text-xl"></div>
+                
+                <button id="all-clear" data-value="AC" class="w-[50px] h-[70px] border-2 border-black rounded-lg bg-red-500 hover:bg-red-700 text-white font-bold justify-center items-center flex hover:text-black">A C</button>
+            </div>
+            <div id="buttonarea" class="flex w-[400px] h-[400px]  gap-4 border-2 border-black px-4 py-4 m-4 rounded-md flex items-center justify-center bg-gray-400">
+                
+                <div class="w-[400px] h-[400px] p-4">
+                    <div class="grid w-full h-full grid-cols-4 grid-rows-5 gap-2">
+                        
+                        <button data-value="*" class="flex items-center justify-center text-lg font-bold text-white bg-blue-300 border-2 border-black rounded-full hover:bg-blue-400 hover:text-black">X</button>
+                        <button data-value="/" class="flex items-center justify-center text-lg font-bold text-white bg-blue-300 border-2 border-black rounded-full hover:bg-blue-400 hover:text-black">/</button>
+                        <button id="clear" data-value="C" class="flex items-center justify-center text-lg font-bold text-white bg-green-600 border-2 border-black rounded-full hover:bg-green-700 hover:text-black">C</button>
+                        <button id="backspace" data-value="⌫" class="flex items-center justify-center text-lg font-bold text-black bg-white border-2 border-black rounded-full hover:bg-gray-200 hover:text-black">⌫</button>
+                        
+                        <button data-value="1" class="flex items-center justify-center row-start-2 text-lg font-bold text-white bg-yellow-300 border-2 border-black rounded-full hover:bg-yellow-400 hover:text-black">1</button>
+                        <button data-value="2" class="flex items-center justify-center row-start-2 text-lg font-bold text-white bg-yellow-300 border-2 border-black rounded-full hover:bg-yellow-400 hover:text-black">2</button>
+                        <button data-value="3" class="flex items-center justify-center row-start-2 text-lg font-bold text-white bg-yellow-300 border-2 border-black rounded-full hover:bg-yellow-400 hover:text-black">3</button>
+                        <button data-value="-" class="flex items-center justify-center row-start-2 text-lg font-bold text-white bg-blue-300 border-2 border-black rounded-full hover:bg-blue-400 hover:text-black">-</button>
+
+                        <button data-value="4" class="flex items-center justify-center row-start-3 text-lg font-bold text-white bg-yellow-300 border-2 border-black rounded-full hover:bg-yellow-400 hover:text-black">4</button>
+                        <button data-value="5" class="flex items-center justify-center row-start-3 text-lg font-bold text-white bg-yellow-300 border-2 border-black rounded-full hover:bg-yellow-400 hover:text-black">5</button>
+                        <button data-value="6" class="flex items-center justify-center row-start-3 text-lg font-bold text-white bg-yellow-300 border-2 border-black rounded-full hover:bg-yellow-400 hover:text-black">6</button>
+                        
+                        <button data-value="7" class="flex items-center justify-center col-start-1 row-start-4 text-lg font-bold text-white bg-yellow-300 border-2 border-black rounded-full hover:bg-yellow-400 hover:text-black">7</button>
+                        <button data-value="8" class="flex items-center justify-center col-start-2 row-start-4 text-lg font-bold text-white bg-yellow-300 border-2 border-black rounded-full hover:bg-yellow-400 hover:text-black">8</button>
+                        <button data-value="9" class="flex items-center justify-center col-start-3 row-start-4 text-lg font-bold text-white bg-yellow-300 border-2 border-black rounded-full hover:bg-yellow-400 hover:text-black">9</button>
+                        
+                        <button data-value="+" class="flex items-center justify-center col-start-4 row-start-3 text-lg font-bold text-white bg-blue-300 border-2 border-black rounded-full hover:bg-blue-400 hover:text-black">+</button>
+                        
+                        <button id="equals" data-value="=" class="flex items-center justify-center row-span-2 row-start-4 text-lg font-bold text-white bg-blue-400 border-2 border-black rounded-full hover:bg-blue-500 hover:text-black">=</button>
+                        <button data-value="%" class="flex items-center justify-center row-start-5 text-lg font-bold text-white bg-blue-300 border-2 border-black rounded-full hover:bg-blue-400 hover:text-black">%</button>
+                        <button data-value="0" class="flex items-center justify-center row-start-5 text-lg font-bold text-white bg-yellow-300 border-2 border-black rounded-full hover:bg-yellow-400 hover:text-black">0</button>
+                        <button data-value="." class="flex items-center justify-center row-start-5 text-lg font-bold text-white bg-yellow-300 border-2 border-black rounded-full hover:bg-yellow-400 hover:text-black">.</button>
+                        
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+        <div id="history-container" class="border-2 border-black rounded-lg w-[350px] m-4 h-[550px] bg-gray-700">
+  <div class="flex items-center justify-center mt-4">
+    <div id="title-area" class="border-2 border-black h-[40px] rounded-lg w-[300px] p-4 bg-blue-200 flex justify-center items-center font-bold text-red-500">
+      <h2>HISTORY</h2>
+    </div>
+  </div>
+  <div class="flex items-center justify-center">
+    <div id="history-list-container" class="border-2 border-black w-[300px] h-[480px] rounded-lg bg-blue-200 overflow-y-auto no-scrollbar">
+      <div id="list" class="ml-4 overflow-y-auto  no-scrollbar h-[480px]">
+        <ul id="history-list no-scrollbar"></ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+
+<a href="bgcolor.html">
+        <button
+  type="submit"
+  class="relative z-10 flex items-center justify-center gap-2 px-4 py-2 mx-auto overflow-hidden text-lg border-2 rounded-full shadow-xl bg-gray-50 backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-emerald-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 group"
+>
+  Level 3
+  <svg
+    class="justify-end w-8 h-8 p-2 duration-300 ease-linear rotate-45 border border-gray-700 rounded-full group-hover:rotate-90 group-hover:bg-gray-50 text-gray-50 group-hover:border-none"
+    viewBox="0 0 16 19"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
+      class="fill-gray-800 group-hover:fill-gray-800"
+    ></path>
+  </svg>
+</button>
+</a>
+    <script src="./calc.js"></script>
+</body>
+</html>

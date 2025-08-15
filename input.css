@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Custom scrollbar hide utility */
+@layer utilities {
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;             /* Chrome, Safari, Opera */
+  }
+}
+/* Hide native select */
+.custom-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  border: none;
+  padding-right: 2rem; /* space for arrow */
+  cursor: pointer;
+}
+
+/* Custom arrow */
+.custom-select {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-select::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  pointer-events: none;
+  border-left: 2px solid #333;
+  border-bottom: 2px solid #333;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/* Style options icons */
+.custom-option-icon {
+  vertical-align: middle;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.25rem;
+  fill: currentColor;
+}
